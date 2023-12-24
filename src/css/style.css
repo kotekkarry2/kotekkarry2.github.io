@@ -1,0 +1,628 @@
+/* В идеале конечно для удобства чтения разнести код по разделам и разложить в папке отдельными файлами и в общем файле CSS всё импортировать. Так и править проще код и удобнее адаптироваться в коде */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+  --color-green: #00a269;
+  --color-gray: #8f8f8f;
+  --color-light-gray: #494949;
+  --color-dark-gray: #242426;
+}
+/* По возможности вынес повторяющийся код в переменные */
+body {
+  background-color: #1d1e20;
+  margin: 0;
+}
+.wrapper {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  max-width: 1180px;
+  max-height: 100%;
+  align-items: center;
+}
+h1 {
+  font-size: 40px;
+  color: var(--color-green);
+}
+h2,
+h3 {
+  color: #c8c8c8;
+}
+h2 {
+  font-size: 40px;
+  margin: 10px 0 5px 0;
+}
+h3 {
+  font-size: 30px;
+}
+.chr {
+  padding: 15px 0;
+}
+.w-50 {
+  width: 50%;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.flex-start {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: center;
+}
+.flex-end {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  text-align: center;
+}
+hr {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-light-gray);
+  border: none;
+  margin: 10px 0 20px 0;
+}
+.page1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 25px 30px 0 30px;
+  width: 100%;
+}
+.page1-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 1180px;
+  height: 400px;
+}
+.page1-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.page2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 25px 30px 0 30px;
+  width: 100%;
+}
+.page2 h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.skils-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.interest {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.page3 {
+  width: 100%;
+  padding: 25px 30px 0 30px;
+  width: 100%;
+}
+/* В идеале переделать нужно раздел, поставив значки и меню иконками, а не делать картинку с рамками */
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 72px;
+  background-color: var(--color-dark-gray);
+  z-index: 4;
+}
+.menu > img {
+  display: flex;
+  justify-content: center;
+  width: 25px;
+  background-color: var(--color-green);
+  border: 23.5px solid var(--color-green);
+}
+.main {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.main img {
+  flex-direction: row;
+  justify-content: space-around;
+  width: 35px;
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image img {
+  width: 350px;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.85;
+  transition: 1s;
+}
+.karina {
+  background-image: url('../picture/photo_2023-03-21_13-44-29.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 350px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.karina h1 {
+  text-align: center;
+  margin: 0;
+}
+.history {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  z-index: 6;
+}
+.history-wrapper p {
+  text-align: center;
+}
+.history p {
+  margin: 0;
+}
+#basis {
+  color: var(--color-green);
+  font-size: 18px;
+}
+#aboutMe {
+  font-size: 18px;
+  color: var(--color-gray);
+  line-height: 1.5;
+  text-align: left;
+}
+#aboutMe li {
+  padding: 10px 0px;
+}
+.history p {
+  text-indent: 20px;
+}
+.affers p:nth-child(2n + 1),
+.affers2 p:nth-child(2n + 1) {
+  color: #c8c8c8;
+  font-size: 18px;
+  font-weight: normal;
+  margin-top: 4px;
+  width: 200px;
+}
+.affers p:nth-child(2n),
+.affers2 p:nth-child(2n) {
+  color: var(--color-gray);
+  width: 280px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+.affers2 p:nth-child(2n + 1) {
+  margin-top: -232px;
+  margin-left: 390px;
+  padding-top: 14px;
+  position: relative;
+}
+.affers2 p:nth-child(2n) {
+  position: relative;
+  width: 350px;
+  padding-top: 2px;
+}
+.affers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+}
+.affers h3 {
+  margin: 0;
+  color: var(--color-green);
+  font-size: 24px;
+  font-weight: 500;
+}
+.flex-container {
+  background-color: var(--color-dark-gray);
+  width: 300px;
+  margin: 20px;
+  border-radius: 25px;
+  border: 0.5px solid var(--color-dark-gray);
+  transition: 1s;
+}
+.flex-container:hover {
+  transform: scale(1.1);
+}
+.flex-container h3 {
+  text-align: left;
+  font-size: 24px;
+  padding: 10px;
+  text-indent: 10px;
+}
+.flex-container p:before {
+  content: '\2713\00A0';
+  color: var(--color-green);
+}
+.flex-container p {
+  font-size: 18px;
+  color: var(--color-gray);
+  text-align: left;
+  padding: 3px 10px;
+  text-indent: 10px;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  padding-bottom: 20px;
+}
+.footer img {
+  width: 40px;
+  height: 40px;
+}
+/* Portrait tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .page1-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .page2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 25px 30px 0 30px;
+    width: 100%;
+  }
+  .page2 h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .skils-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .interest {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .page3 {
+    width: 100%;
+    padding: 25px 30px 0 30px;
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 72px;
+    background-color: var(--color-dark-gray);
+    z-index: 4;
+  }
+  .menu > img {
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    background-color: var(--color-green);
+    border: 23.5px solid var(--color-green);
+  }
+  .main {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main img {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 35px;
+  }
+  .image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image img {
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.85;
+    transition: 1s;
+  }
+  .karina h1 {
+    text-align: center;
+    margin: 0;
+  }
+  .history {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 6;
+  }
+  .history-wrapper p {
+    text-align: center;
+  }
+  .history p {
+    margin: 0;
+  }
+  #basis {
+    color: var(--color-green);
+    font-size: 18px;
+  }
+  #aboutMe {
+    font-size: 18px;
+    color: var(--color-gray);
+    line-height: 1.5;
+    text-align: left;
+  }
+  #aboutMe li {
+    padding: 10px 0px;
+  }
+  .history p {
+    text-indent: 20px;
+  }
+  .flex-container:hover {
+    transform: scale(1.1);
+  }
+  .flex-container h3 {
+    text-align: left;
+    font-size: 24px;
+    padding: 10px;
+    text-indent: 10px;
+  }
+  .flex-container p:before {
+    content: '\2713\00A0';
+    color: var(--color-green);
+  }
+  .flex-container p {
+    font-size: 18px;
+    color: var(--color-gray);
+    text-align: left;
+    padding: 3px 10px;
+    text-indent: 10px;
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .w-50 {
+    width: 100%;
+  }
+  .page1-content {
+    width: 990px;
+  }
+  .page1-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 10%;
+    max-width: 10%;
+    background-color: var(--color-dark-gray);
+    z-index: 4;
+  }
+  .menu > img {
+    display: flex;
+    justify-content: center;
+    width: 25px;
+    background-color: var(--color-green);
+    border: 20px solid var(--color-green);
+  }
+  .main img {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 35px;
+    padding: 10px 0;
+  }
+  .image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+  .image img {
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.85;
+    transition: 1s;
+  }
+  .karina {
+    width: 100%;
+    height: 100%;
+  }
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+  .w-50 {
+    width: 100%;
+  }
+  .chr {
+    padding: 5px 0;
+  }
+  .page1-content {
+    width: 760px;
+  }
+  .page1-flex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+  .karina {
+    width: 100%;
+    height: 100%;
+  }
+  .menu {
+    width: 10%;
+    max-width: 10%;
+    background-color: var(--color-dark-gray);
+    z-index: 4;
+  }
+  .page2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    width: 100%;
+  }
+  .page3 {
+    width: 100%;
+    padding: 0 30px;
+    width: 100%;
+  }
+  .menu > img {
+    display: flex;
+    justify-content: center;
+    width: 18px;
+    background-color: var(--color-green);
+    border: 18px solid var(--color-green);
+  }
+  .main img {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 35px;
+    padding: 10px 0;
+  }
+  .image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+  }
+  .image img {
+    width: 85%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.85;
+    transition: 1s;
+  }
+  .flex-container {
+    width: 400px;
+    margin: 20px;
+  }
+  .footer {
+    width: 40%;
+  }
+}
+/* Landscape phones and portrait tablets */
+@media (max-width: 480px) {
+  .page1 {
+    width: 90%;
+  }
+  .page1-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 990px;
+    height: 400px;
+  }
+  .page2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    width: 100%;
+  }
+  .page3 {
+    width: 100%;
+    padding: 0 30px;
+    width: 100%;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--color-dark-gray);
+    z-index: 4;
+  }
+  .menu > img {
+    display: flex;
+    justify-content: center;
+    width: 15px;
+    background-color: var(--color-green);
+    border: 15px solid var(--color-green);
+  }
+  .main img {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 35px;
+    padding: 10px 0;
+  }
+  .image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 82%;
+  }
+  .image img {
+    width: 85%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0.85;
+    transition: 1s;
+  }
+}

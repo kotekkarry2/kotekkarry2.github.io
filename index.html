@@ -4,138 +4,196 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Bondar Karina</title>
+    <!-- Перенёс css в отдельную папку -->
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Portfolio</title>
   </head>
   <body>
-    <div class="menu">
-      <img src="./photo/free-icon-hamburger-2516745.png" alt="Меню" />
-      <div class="main">
-        <a href="#page1.0">
-          <img
-            src="./photo/iconizer-3741756-bussiness-ecommerce-marketplace-onlinestore-store-user_108907.svg"
-            alt="Обо мне"
-          />
-        </a>
-        <a href="#page2.0">
-          <img
-            src="./photo/iconizer-976597-appliances-computer-desktop-display-screen-tower-work_106540.svg"
-            alt="Навыки"
-          />
-        </a>
-        <a href="#page3.0">
-          <img
-            src="./photo/iconizer-Phone-old_icon-icons.com_51955.svg"
-            alt="Контакты"
-          />
-        </a>
-      </div>
-    </div>
-    <div class="image">
-      <img src="./photo/photo_2023-03-21_13-44-29.jpg" alt="Карина" />
-    </div>
-    <div class="history">
-      <h1 id="page1.0">about me</h1>
-      <p id="basis">21 years / Moscow / FullStack developer</p>
-      <p id="aboutMe">
-        Обучалась в Польше в Лодзинском университете на факультете физики и
-        информатики по направлению прикладная информатика. Участвовала в
-        различных мероприятиях посвященных дню информатики. Прошла отбор Эрасмус
-        для лучших студентов в Финляндию, но из-за сложившихся обстоятельств
-        поездка не удалась. В свободное от учебы время преподавала языки,
-        особенно польский для иностранцев. В связи с этим легко нахожу контакт с
-        людьми любых возрастов и характеров...
-      </p>
-      <hr />
-      <h2 id="interests">interests</h2>
-      <br />
-      <div class="affers">
-        <p><strong>программирование</strong></p>
-        <p>
-          В свободное время чтение книг и документации по языкам JavaScript,
-          SQL, Python.
-        </p>
-        <p><strong>технологии</strong></p>
-        <p>
-          Люблю смотреть познавательные видео и лекции. Читаю статьи и новости о
-          новшествах в науке.
-        </p>
-        <div class="affers2">
-          <p><strong>чтение книг</strong></p>
-          <p>
-            Время от времени беру в руки как художественную литературу, так и
-            научную. В собенности люблю книги о космосе.
-          </p>
-          <p style="margin-top: 0px"><strong>изучение языков</strong></p>
-          <p>
-            Занимаюсь повторением польского языка и совершествованием
-            английского
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="karina">
-      <h1>Bondar Karina</h1>
-    </div>
-    <div class="page2" id="page2.0">
-      <h1>my skills</h1>
-      <hr />
-      <div class="language">
-        <h1>languages</h1>
-        <p>Английский язык B2</p>
-        <p>Польский язык С1</p>
-        <p>Русский язык С2</p>
-        <p>Испансикй язык А1</p>
-      </div>
-      <div class="frontend">
-        <h1>frontend</h1>
-        <p>CSS/HTML</p>
-        <p>Git & GitHub</p>
-        <p>JavaScript</p>
-        <p>Фреймворки</p>
-      </div>
-      <div class="backend">
-        <h1>backend</h1>
-        <p>Python</p>
-        <p>MySQL</p>
-        <p>Алгоритмы и тестирование</p>
-        <p>Фреймворки</p>
-      </div>
-      <div class="design">
-        <h1>design</h1>
-        <p>Photoshop</p>
-        <p>Figma</p>
-        <p>Illustrator</p>
-        <p>Adobe XD</p>
-      </div>
-      <div class="soft">
-        <h1>soft skills</h1>
-        <p>Умение работать в команде</p>
-        <p>Умение адаптироваться</p>
-        <p>Креативность</p>
-        <p>Аналитическое мышление</p>
-      </div>
-    </div>
+    <!-- Обернул всё в div для использования flex -->
+    <div class="wrapper">
+      <div class="content">
+        <div class="page1">
+          <div class="page1-flex">
+            <div class="w-50 flex-start">
+              <div class="menu">
+                <img
+                  src="./src/icons/free-icon-hamburger-2516745.png"
+                  alt="Меню"
+                />
+                <div class="main">
+                  <a href="#page1.0">
+                    <img
+                      src="./src/icons/iconizer-3741756-bussiness-ecommerce-marketplace-onlinestore-store-user_108907.svg"
+                      alt="Обо мне"
+                    />
+                  </a>
+                  <a href="#page2.0">
+                    <img
+                      src="./src/icons/iconizer-976597-appliances-computer-desktop-display-screen-tower-work_106540.svg"
+                      alt="Навыки"
+                    />
+                  </a>
+                  <a href="#page3.0">
+                    <img
+                      src="./src/icons/iconizer-Phone-old_icon-icons.com_51955.svg"
+                      alt="Контакты"
+                    />
+                  </a>
+                </div>
+              </div>
 
-    <div class="page3">
-      <h1 id="page3.0">contacts</h1>
-      <hr />
-      <div class="footer">
-        <a href="//github.com/kotekkarry2">
-          <img
-            src="./photo/iconizer-github-logo_icon-icons.com_73546.svg"
-            alt="github"
-          />
-        </a>
-        <a href="//t.me/KotekKarry">
-          <img
-            src="./photo/iconizer-telegram_logo_icon_144811.svg"
-            alt="telegram"
-          />
-        </a>
-        <a href="//vk.com/kbondar2001">
-          <img src="./photo/iconizer-vk_logo_icon_186923.svg" alt="vk" />
-        </a>
+              <div class="image">
+                <div class="karina">
+                  <h1>Bondar Karina</h1>
+                </div>
+              </div>
+            </div>
+            <!-- Перенес в другой раздел для удобства чтения и редактирования -->
+            <div class="w-50 page1-flex">
+              <div class="history">
+                <h2 id="page1.0">About me</h2>
+                <hr />
+                <div class="history-wrapper">
+                  <p id="basis">21 years / Moscow / FullStack developer</p>
+                  <!-- Объеденил в список для удобства редактирования -->
+                  <ul id="aboutMe">
+                    <li>
+                      Обучалась в Польше в Лодзинском университете <br />на
+                      факультете физики и информатики<br />по направлению
+                      прикладная информатика.
+                    </li>
+                    <li>
+                      Участвовала в различных мероприятиях <br />посвященных дню
+                      информатики.
+                    </li>
+                    <li>
+                      Прошла отбор Эрасмус для лучших студентов<br />в
+                      Финляндию, но из-за сложившихся обстоятельств поездка не
+                      удалась.
+                    </li>
+                    <li>
+                      В свободное от учебы время преподавала языки,<br />
+                      особенно польский для иностранцев.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chr">&nbsp;</div>
+        <!-- Разбил лендинг на условные три части для удобства чтения кода и редактирования -->
+        <div class="page2" id="page2.0">
+          <div class="interest">
+            <h2>Interests</h2>
+            <hr />
+            <!-- Добавил переносы, чтобы читалось лучше -->
+            <div class="affers">
+              <div>
+                <h3>Программирование</h3>
+                <p>
+                  В свободное время<br />читаю книги и документацию<br />по
+                  языкам <b>JavaScript, SQL, Python</b>.
+                </p>
+              </div>
+              <div>
+                <h3>Технологии</h3>
+                <p>
+                  Смотрю познавательные<br />видео и лекции.<br />
+                  Читаю статьи и новости о новшествах в науке.
+                </p>
+              </div>
+              <div>
+                <h3><strong>Чтение книг</strong></h3>
+                <p>
+                  Время от времени читаю <br />художественную и<br />научную
+                  литературу.<br />В особенности люблю книги о космосе.
+                </p>
+              </div>
+
+              <div>
+                <h3><strong>Изучение языков</strong></h3>
+                <p>
+                  Занимаюсь повторением польского языка и совершенствованием
+                  английского
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Добавил одинаковые промежутки между разделами -->
+          <div class="chr">&nbsp;</div>
+
+          <div class="skills">
+            <h2>My skills</h2>
+            <hr />
+            <div class="skils-wrapper">
+              <div class="flex-container">
+                <h3>Languages</h3>
+                <p>Английский язык B2</p>
+                <p>Польский язык С1</p>
+                <p>Русский язык С2</p>
+                <p>Испанский язык А1</p>
+              </div>
+              <div class="flex-container">
+                <h3>Frontend</h3>
+                <p>CSS/HTML</p>
+                <p>Git & GitHub</p>
+                <p>JavaScript</p>
+                <p>Фреймворки</p>
+              </div>
+
+              <div class="flex-container">
+                <h3>Backend</h3>
+                <p>Python</p>
+                <p>MySQL</p>
+                <p>Алгоритмы и тестирование</p>
+                <p>Фреймворки</p>
+              </div>
+              <div class="flex-container">
+                <h3>Design</h3>
+                <p>Photoshop</p>
+                <p>Figma</p>
+                <p>Illustrator</p>
+                <p>Adobe XD</p>
+              </div>
+              <div class="flex-container">
+                <h3>Soft skills</h3>
+                <p>Умение работать в команде</p>
+                <p>Умение адаптироваться</p>
+                <p>Креативность</p>
+                <p>Аналитическое мышление</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chr">&nbsp;</div>
+        <!-- Создал отдельный footer -->
+        <div class="page3 flex-row">
+          <h2 id="page3.0">Contacts</h2>
+          <hr />
+          <div class="footer flex-row">
+            <a href="//github.com/kotekkarry2">
+              <img
+                src="./src/icons/iconizer-github-logo_icon-icons.com_73546.svg"
+                alt="github"
+              />
+            </a>
+            <a href="//t.me/KotekKarry">
+              <img
+                src="./src/icons/iconizer-telegram_logo_icon_144811.svg"
+                alt="telegram"
+              />
+            </a>
+            <a href="//vk.com/kbondar2001">
+              <img
+                src="./src/icons/iconizer-vk_logo_icon_186923.svg"
+                alt="vk"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </body>
